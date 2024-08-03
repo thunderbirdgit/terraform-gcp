@@ -4,6 +4,13 @@
 ##### Overview
 This project uses Terraform to automate the setup of a Google Kubernetes Engine (GKE) cluster and PostgreSQL database instance on Google Cloud Platform (GCP). The Terraform scripts provided in this repository are designed to simplify the process of infrastructure provisioning for both development environments and can be used for other environments as well. This setup includes creating and configuring the GKE cluster, deploying the PostgreSQL database, and ensuring secure access and management through IAM roles and Kubernetes secrets.
 
+#### Goals
+- Provision a GKE Cluster: Automate the creation of a GKE cluster with appropriate settings for development and production environments.
+Deploy
+- PostgreSQL: Set up a PostgreSQL database instance on GCP and configure it for use with applications running on the GKE cluster.
+- Ensure Security: Manage authentication and authorization through IAM roles and Kubernetes secrets to maintain secure access to the GKE cluster and database.
+- Facilitate Automation: Use Terraform to handle infrastructure as code, allowing for reproducible and consistent setups across different environments.
+
 ## Setup Instructions
 
 1. **Create a Google Cloud Platform (GCP) Account**
