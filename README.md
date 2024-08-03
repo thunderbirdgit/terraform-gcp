@@ -11,6 +11,28 @@ Deploy
 - Ensure Security: Manage authentication and authorization through IAM roles and Kubernetes secrets to maintain secure access to the GKE cluster and database.
 - Facilitate Automation: Use Terraform to handle infrastructure as code, allowing for reproducible and consistent setups across different environments.
 
+## Tool Decisions
+#### Terraform
+- Reason for Choice: Terraform is used for Infrastructure as Code (IaC) to automate the provisioning and management of cloud resources. It allows for declarative configuration and version control of infrastructure, ensuring consistency across different environments.
+- Advantages:
+  - Declarative syntax for defining infrastructure.
+  - Support for a wide range of cloud providers.
+  - Strong community support and extensive documentation.
+    
+#### Google Kubernetes Engine (GKE)
+- Reason for Choice: GKE provides a fully managed Kubernetes environment, simplifying cluster management, scaling, and operations. It integrates seamlessly with other GCP services.
+- Advantages:
+   - Managed Kubernetes infrastructure with automated updates and scaling.
+   - Integration with GCP’s security, monitoring, and logging services.
+   - High availability and reliability.
+
+#### Cloud SQL (PostgreSQL)
+- Reason for Choice: Cloud SQL offers a managed PostgreSQL service with automatic backups, replication, and patch management, reducing administrative overhead.
+- Advantages:
+   - Managed service with built-in high availability and automated backups.
+   - Seamless integration with GKE for database connectivity.
+   - Security features such as encryption and IAM-based access control.
+
 ## Setup Instructions
 
 1. **Create a Google Cloud Platform (GCP) Account**
@@ -93,3 +115,8 @@ After applying the Terraform configurations, verify that:
 9. **Cleanup Resources**
 - When you have finished and want to destroy the clusters to save costs, run: `terraform destroy`
 
+
+## Lessons Learned
+- Automation Benefits: Automation with Terraform significantly reduced manual effort and errors in provisioning infrastructure.
+- Security Practices: Proper management of IAM roles and Kubernetes secrets is crucial for maintaining security.
+- Integration Challenges: Ensured smooth integration between GKE and Cloud SQL, addressing any connectivity and configuration issues
