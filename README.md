@@ -1,6 +1,37 @@
 # Terraform Setup for GKE and Cloud SQL
 
-This repository contains Terraform configurations for creating a Google Kubernetes Engine (GKE) cluster and setting up a Cloud SQL PostgreSQL instance.
+## Project Description
+##### Overview
+This project uses Terraform to automate the setup of a Google Kubernetes Engine (GKE) cluster and PostgreSQL database instance on Google Cloud Platform (GCP). The Terraform scripts provided in this repository are designed to simplify the process of infrastructure provisioning for both development environments and can be used for other environments as well. This setup includes creating and configuring the GKE cluster, deploying the PostgreSQL database, and ensuring secure access and management through IAM roles and Kubernetes secrets.
+
+#### Goals
+- Provision a GKE Cluster: Automate the creation of a GKE cluster with appropriate settings for development and production environments.
+Deploy
+- PostgreSQL: Set up a PostgreSQL database instance on GCP and configure it for use with applications running on the GKE cluster.
+- Ensure Security: Manage authentication and authorization through IAM roles and Kubernetes secrets to maintain secure access to the GKE cluster and database.
+- Facilitate Automation: Use Terraform to handle infrastructure as code, allowing for reproducible and consistent setups across different environments.
+
+## Tool Decisions
+#### Terraform
+- Reason for Choice: Terraform is used for Infrastructure as Code (IaC) to automate the provisioning and management of cloud resources. It allows for declarative configuration and version control of infrastructure, ensuring consistency across different environments.
+- Advantages:
+  - Declarative syntax for defining infrastructure.
+  - Support for a wide range of cloud providers.
+  - Strong community support and extensive documentation.
+    
+#### Google Kubernetes Engine (GKE)
+- Reason for Choice: GKE provides a fully managed Kubernetes environment, simplifying cluster management, scaling, and operations. It integrates seamlessly with other GCP services.
+- Advantages:
+   - Managed Kubernetes infrastructure with automated updates and scaling.
+   - Integration with GCP’s security, monitoring, and logging services.
+   - High availability and reliability.
+
+#### Cloud SQL (PostgreSQL)
+- Reason for Choice: Cloud SQL offers a managed PostgreSQL service with automatic backups, replication, and patch management, reducing administrative overhead.
+- Advantages:
+   - Managed service with built-in high availability and automated backups.
+   - Seamless integration with GKE for database connectivity.
+   - Security features such as encryption and IAM-based access control.
 
 ## Setup Instructions
 
@@ -84,3 +115,8 @@ After applying the Terraform configurations, verify that:
 9. **Cleanup Resources**
 - When you have finished and want to destroy the clusters to save costs, run: `terraform destroy`
 
+
+## Lessons Learned
+- Automation Benefits: Automation with Terraform significantly reduced manual effort and errors in provisioning infrastructure.
+- Security Practices: Proper management of IAM roles and Kubernetes secrets is crucial for maintaining security.
+- Integration Challenges: Ensured smooth integration between GKE and Cloud SQL, addressing any connectivity and configuration issues
