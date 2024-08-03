@@ -1,6 +1,8 @@
 # Terraform Setup for GKE and Cloud SQL
 
-This repository contains Terraform configurations for creating a Google Kubernetes Engine (GKE) cluster and setting up a Cloud SQL PostgreSQL instance.
+## Project Description
+##### Overview
+This project uses Terraform to automate the setup of a Google Kubernetes Engine (GKE) cluster and PostgreSQL database instance on Google Cloud Platform (GCP). The Terraform scripts provided in this repository are designed to simplify the process of infrastructure provisioning for both development environments and can be used for other environments as well. This setup includes creating and configuring the GKE cluster, deploying the PostgreSQL database, and ensuring secure access and management through IAM roles and Kubernetes secrets.
 
 ## Setup Instructions
 
