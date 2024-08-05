@@ -96,14 +96,23 @@ Deploy
    ```
    <img width="776" alt="image" src="https://github.com/user-attachments/assets/5402d8ea-b62a-438d-a5f7-6525921fb1ca">
    
-7. **Execute the terraform commands**
+7. ## Setup Permissions
+   - Enable Service Usage API access - https://console.cloud.google.com/apis/api/serviceusage.googleapis.com/
+   - Enable Cloud Resource Manager API access - https://console.cloud.google.com/apis/library/cloudresourcemanager.googleapis.com
+   - Enable Secrets Manager API access - https://console.cloud.google.com/marketplace/product/google/secretmanager.googleapis.com
+   - Setup DB secrets in Secrets Manager. Specify the username and password in the secrets section https://console.cloud.google.com/security/secret-manager
+   - For Postgres DB Instance creation, enable Cloud SQL Admin API - https://console.cloud.google.com/apis/api/sqladmin.googleapis.com/
+   
+     <img width="624" alt="image" src="https://github.com/user-attachments/assets/4588e9cf-447c-4943-8985-1662950b86c7">
+     
+8. **Execute the terraform commands**
       ```
       terraform init
       terraform plan
       terraform apply
       ```
       
-8. **Verify the Setup**
+9. **Verify the Setup**
 After applying the Terraform configurations, verify that:
 - The dev-gke-cluster appears in the Kubernetes console.
   <img width="771" alt="image" src="https://github.com/user-attachments/assets/55b03e0a-7772-43e6-89e8-d613b6274d89">
@@ -112,7 +121,7 @@ After applying the Terraform configurations, verify that:
 - The PostgreSQL instance is created in Google Cloud.
   <img width="633" alt="image" src="https://github.com/user-attachments/assets/da4e6b4a-e46a-4130-9a6e-ac0ae43420f0">
 
-9. **Cleanup Resources**
+10. **Cleanup Resources**
 - When you have finished and want to destroy the clusters to save costs, run: `terraform destroy`
 
 
