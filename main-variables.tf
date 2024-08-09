@@ -1,7 +1,7 @@
 variable "project_id" {
-  description = "idme test exercise"
+  description = "Demo project"
   type        = string
-  default = "nonprod-app-cluster"
+  default = "nonprod-app-cluster-431611"
 }
 
 variable "cluster_name" {
@@ -52,6 +52,11 @@ variable "desired_node_count" {
   description = "Desired number of nodes in the node pool"
   type        = number
   default     = 6
+}
+
+variable "gar_docker_repo" {
+   description = "Name of the Google Artifact Registry repo"
+   type = string
 }
 
 /*

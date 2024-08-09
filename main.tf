@@ -1,5 +1,5 @@
 provider "google" {
-  project = "nonprod-app-cluster"
+  project = "nonprod-app-cluster-431611"
   region  = "us-central1"
 }
 
@@ -7,6 +7,13 @@ module "database" {
   source = "./modules/database"
   environment = var.environment  
   region = var.region
+}
+
+module "gar" {
+  source = "./modules/gar"
+  project_id = var.project_id
+  region = var.region
+  gar_docker_repo = var.gar_docker_repo
 }
 
 module "gkecluster" {
